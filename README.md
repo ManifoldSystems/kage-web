@@ -9,7 +9,7 @@ Product site for Kage, an autonomous engineering system that coordinates AI agen
 - React 19 + TypeScript
 - Vite 8
 - Tailwind CSS 4
-- Cloudflare Workers (static assets + `/api/*`)
+- Deployed on Vercel
 
 ## Development
 
@@ -18,15 +18,16 @@ npm install
 npm run dev
 ```
 
-## Build & deploy
+## Build
 
 ```bash
-npm run build       # production build
-npm run preview     # preview the build locally
-npx wrangler deploy # deploy to Cloudflare Workers
+npm run build     # production build
+npm run preview   # preview the build locally
 ```
 
 `npm run typecheck` runs TypeScript with no emit.
+
+Deployment is handled by Vercel: pushes to `main` deploy to production, and pull requests get preview URLs.
 
 ---
 
